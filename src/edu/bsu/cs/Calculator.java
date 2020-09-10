@@ -16,4 +16,18 @@ public class Calculator {
         return binarySqrd;
     }
 
+    public String binarySubtract(String firstBinary, String secondBinary){
+        int firstDecimal = Integer.parseInt(firstBinary, 2);
+        int secondDecimal = Integer.parseInt(secondBinary, 2);
+        int total = firstDecimal + secondDecimal;
+        return Integer.toBinaryString(total);
+    }
+
+    public String binaryAdd(String firstBinary, String secondBinary){
+        int firstDecimal = Integer.parseInt(firstBinary, 2);
+        int secondDecimal = Integer.parseInt(secondBinary, 2);
+        int total = firstDecimal - secondDecimal;
+        return Integer.toBinaryString(total);
+    }
+
 }
