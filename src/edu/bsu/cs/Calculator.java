@@ -6,7 +6,7 @@ public class Calculator {
 
     public String binarySqRoot(String binaryInput){
         int binaryToDecimal = Integer.parseInt(binaryInput, 2);
-        String binarySqRoot = Integer.toBinaryString((int)Math.sqrt(binaryToDecimal));
+        String binarySqRoot = Integer.toBinaryString(((int)Math.sqrt(binaryToDecimal)));
         return binarySqRoot;
     }
 
