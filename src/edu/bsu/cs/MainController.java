@@ -13,7 +13,6 @@ public class MainController extends Application {
         //TODO: UI code
     }
 
-    public static void main(String [] args) {
-        launch(args); // Launch application
+    public static void main(String [] args) { launch(args); // Launch application
     }
 }
