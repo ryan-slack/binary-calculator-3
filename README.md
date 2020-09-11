@@ -16,7 +16,7 @@ Ryan Slack = UI & documentation
 
 Noah Connolly = model (square root and squared functions)
 
-James Shallcross = 
+James Shallcross = model (multiplication and division)
 
 Nathaniel Barber = model (addition and subtraction)
 
