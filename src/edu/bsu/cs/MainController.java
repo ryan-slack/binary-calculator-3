@@ -47,17 +47,47 @@ public class MainController {
                 if(!value.equals("x²") && !value.equals("√"))
                     output.setText(operator);
                 else {
-                    //TODO: call binarySquared and binarySquareRoot functions
+                    if(operator.equals("x²")) {
+                        result = calculator.binarySqrd(num1);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                    } else {
+                        result = calculator.binarySqRoot(num1);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                    }
                 }
             } else {
                 if(operator.isEmpty())
                     return;
                 num2 = output.getText();
-                if(operator.equals("+")) {
-                    result = calculator.binaryAdd(num1, num2);
-                    output.setText(result);
-                    operator = "";
-                    start = true;
+                switch (operator) {
+                    case "+":
+                        result = calculator.binaryAdd(num1, num2);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                        break;
+                    case "-":
+                        result = calculator.binarySubtract(num1, num2);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                        break;
+                    case "x":
+                        result = calculator.binaryMultiply(num1, num2);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                        break;
+                    default:
+                        result = calculator.binaryDivide(num1, num2);
+                        output.setText(result);
+                        operator = "";
+                        start = true;
+                        break;
                 }
             }
         }
