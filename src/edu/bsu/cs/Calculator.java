@@ -8,7 +8,7 @@ public class Calculator {
         return binarySqRoot;
     }
 
-    public String binarySqrd( String binaryInput){
+    public String binarySqrd(String binaryInput){
         int binaryToDecimal = Integer.parseInt(binaryInput, 2);
         String binarySqrd = Integer.toBinaryString(binaryToDecimal * binaryToDecimal);
         return binarySqrd;
@@ -25,21 +25,34 @@ public class Calculator {
         int firstDecimal = Integer.parseInt(firstBinary, 2);
         int secondDecimal = Integer.parseInt(secondBinary, 2);
         int total = firstDecimal - secondDecimal;
-        return Integer.toBinaryString(total);
+        if(total < 0) {
+            total = total - total - total;
+        }
+        return "-" + Integer.toBinaryString(total);
     }
 
     public String binaryMultiply (String firstBinary, String secondBinary) {
         int firstDecimal = Integer.parseInt(firstBinary, 2);
         int secondDecimal = Integer.parseInt(secondBinary, 2);
         int total = firstDecimal * secondDecimal;
-        return Integer.toBinaryString(total);
+        if(total < 0) {
+            total = total - total - total;
+        }
+        return "-" + Integer.toBinaryString(total);
     }
 
     public String binaryDivide (String firstBinary, String secondBinary) {
         int firstDecimal = Integer.parseInt(firstBinary, 2);
         int secondDecimal = Integer.parseInt(secondBinary, 2);
-        int total = firstDecimal / secondDecimal;
-        return Integer.toBinaryString(total);
+        if(secondDecimal == 0)
+            return "Error";
+        else {
+            int total = firstDecimal / secondDecimal;
+            if (total < 0) {
+                total = total - total - total;
+            }
+            return "-" + Integer.toBinaryString(total);
+        }
     }
 
 }
