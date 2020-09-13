@@ -4,8 +4,12 @@ public class Calculator {
 
     public String binarySqRoot(String binaryInput){
         int binaryToDecimal = Integer.parseInt(binaryInput, 2);
-        String binarySqRoot = Integer.toBinaryString(((int)Math.sqrt(binaryToDecimal)));
-        return binarySqRoot;
+        if(binaryToDecimal < 0)
+            return "Error";
+        else {
+            String binarySqRoot = Integer.toBinaryString(((int) Math.sqrt(binaryToDecimal)));
+            return binarySqRoot;
+        }
     }
 
     public String binarySqrd(String binaryInput){
