@@ -26,9 +26,11 @@ public class Calculator {
         int secondDecimal = Integer.parseInt(secondBinary, 2);
         int total = firstDecimal - secondDecimal;
         if(total < 0) {
-            total = total - total - total;
+            total = -total;
+            return "-" + Integer.toBinaryString(total);
+        } else {
+            return Integer.toBinaryString(total);
         }
-        return "-" + Integer.toBinaryString(total);
     }
 
     public String binaryMultiply (String firstBinary, String secondBinary) {
@@ -36,9 +38,11 @@ public class Calculator {
         int secondDecimal = Integer.parseInt(secondBinary, 2);
         int total = firstDecimal * secondDecimal;
         if(total < 0) {
-            total = total - total - total;
+            total = -total;
+            return "-" + Integer.toBinaryString(total);
+        } else {
+            return Integer.toBinaryString(total);
         }
-        return "-" + Integer.toBinaryString(total);
     }
 
     public String binaryDivide (String firstBinary, String secondBinary) {
@@ -48,10 +52,12 @@ public class Calculator {
             return "Error";
         else {
             int total = firstDecimal / secondDecimal;
-            if (total < 0) {
-                total = total - total - total;
+            if(total < 0) {
+                total = -total;
+                return "-" + Integer.toBinaryString(total);
+            } else {
+                return Integer.toBinaryString(total);
             }
-            return "-" + Integer.toBinaryString(total);
         }
     }
 
