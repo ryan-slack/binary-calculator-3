@@ -40,20 +40,18 @@ public class MainController {
             output.setText(String.valueOf(decimal));
             isDecimal = true;
         } else {
-            binary = Integer.toBinaryString(Integer.parseInt(output.getText(), 10));
-            output.setText(binary);
-            isDecimal = false;
+            decimal = Integer.parseInt(output.getText(), 10);
+            if(decimal < 0) {
+                decimal = -decimal;
+                binary = Integer.toBinaryString(decimal);
+                output.setText("-" + binary);
+                isDecimal = false;
+            } else {
+                binary = Integer.toBinaryString(decimal);
+                output.setText(binary);
+                isDecimal = false;
+            }
         }
-
-        /*int decimal;
-        String binary;
-        if(!output.getText().matches("^[2-9].*") && output.getText().matches("0") || output.getText().matches("1")) {
-            decimal = Integer.parseInt(output.getText());
-            output.setText(Integer.toString(decimal));
-        } else if(output.getText().matches("^[2-9].*")) {
-            binary = Integer.toBinaryString(Integer.parseInt(output.getText()));
-            output.setText(binary);
-        }*/
     }
 
     @FXML
