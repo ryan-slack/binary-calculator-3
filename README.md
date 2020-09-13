@@ -3,10 +3,11 @@ This project requires JavaFX, which can be downloaded from https://openjfx.io/.
 In Intellij, JavaFX can be configured from the project settings page by adding the necessary jar files from the 'lib' folder of the JavaFX sdk to your project's libraries.
 
 To use this calculator:
-User can enter one binary number and perform squaring or square root operations by pressing their respective buttons. Alternatively, the user can enter two binary numbers and perform addition, subtraction, multiplication, or division operations by entering the first number, then pressing the operator button (+, -, x, or /), entering the second number, and pressing the equals button. The display will update accordingly. Operations can also be cleared by pressing the C button.
+User can enter one binary number and perform squaring or square root operations by pressing their respective buttons. Alternatively, the user can enter two binary numbers and perform addition, subtraction, multiplication, or division operations by entering the first number, then pressing the operator button (+, -, x, or /), entering the second number, and pressing the equals button. The display will update accordingly. Operations can also be cleared by pressing the C button. Finally, the user can alternate between decimal and binary by pressing the toggle button.
 
 Screenshots:
-https://ibb.co/Wc28JcV , https://ibb.co/RjHRWf8
+https://ibb.co/28cmD7r
+https://ibb.co/KLgJ24n
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
